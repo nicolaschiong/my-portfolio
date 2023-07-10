@@ -15,24 +15,18 @@ const DefaultFooter = () => {
               <div className="footer-logo mb-20 wow fadeInRight delay-0-2s animated">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img src="assets/images/logos/footer-logo.png" alt="Logo" />
+                    <img src="assets/images/logos/nicolas-chiong-logo.svg" alt="Logo" />
                   </a>
                 </Link>
               </div>
             </div>
             <div className="col-lg-8 text-lg-end">
               <div className="social-style-four mb-20 wow fadeInLeft delay-0-2s animated">
-                <a href="#">
-                  <i className="fab fa-facebook-f" /> <span>Facebook</span>
+                <a href="https://www.linkedin.com/in/nicolaschiong/" target="_blank">
+                  <i className="fab fa-linkedin" /> <span>LinkedIn</span>
                 </a>
-                <a href="#">
-                  <i className="fab fa-twitter" /> <span>Twitter</span>
-                </a>
-                <a href="#">
-                  <i className="fab fa-dribbble" /> <span>Dribbble</span>
-                </a>
-                <a href="#">
-                  <i className="fab fa-behance" /> <span>Behance</span>
+                <a href="https://github.com/nicolaschiong" target="_blank">
+                  <i className="fab fa-github" target="_blank" /> <span>Github</span>
                 </a>
               </div>
             </div>
@@ -102,11 +96,7 @@ const DefaultFooter = () => {
                       Marketing
                     </Link>
                   </li>
-                  <li>
-                    <Link legacyBehavior href="contact">
-                      Need a Career
-                    </Link>
-                  </li>
+
                   <li>
                     <Link legacyBehavior href="faqs">
                       Faqs ?

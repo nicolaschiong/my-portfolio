@@ -456,7 +456,7 @@ const SingleMenu = () => {
   return (
     <ul className="navigation onepage clearfix">
       <li>
-        <a href="#home">Home</a>
+        <a href="#home">Homey</a>
       </li>
       <li>
         <a href="#about">about</a>

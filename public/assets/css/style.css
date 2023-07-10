@@ -61,7 +61,7 @@ body {
   font-family: var(--njc-primary-font);
   --njc-primary-font: Inter;
   --njc-secondary-font: Inter;
-  --njc-primary-color: #55e6a5;
+  --njc-primary-color: #fabd00;
   --njc-secondary-color: #ffffff;
   --njc-tertiary-color: #16161c;
   --njc-body-color: rgba(255, 255, 255, 0.75);
@@ -10646,13 +10646,13 @@ blockquote .blockquote-footer:before {
 /*******************************************************/
 .author-speech {
   color: white;
-  font-size: 27px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.67;
 }
 @media only screen and (max-width: 767px) {
   .author-speech {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 .author-speech .quote {

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment } from "react"
 const SideBar = () => {
   return (
     <Fragment>
@@ -9,28 +9,21 @@ const SideBar = () => {
             <span className="fa fa-times" />
           </div>
           <div className="title">
-            <h4>Get Appointment</h4>
+            <h4>Let's get in touch!</h4>
           </div>
           {/*Appointment Form*/}
           <div className="appointment-form">
             <form
               onSubmit={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("body")
-                  .classList.remove("side-content-visible");
+                e.preventDefault()
+                document.querySelector("body").classList.remove("side-content-visible")
               }}
             >
               <div className="form-group">
                 <input type="text" name="text" placeholder="Name" required />
               </div>
               <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  required
-                />
+                <input type="email" name="email" placeholder="Email Address" required />
               </div>
               <div className="form-group">
                 <textarea placeholder="Message" rows={5} />
@@ -44,22 +37,16 @@ const SideBar = () => {
           </div>
           {/*Social Icons*/}
           <div className="social-style-one">
-            <a href="#">
-              <i className="fab fa-twitter" />
+            <a href="https://www.linkedin.com/in/nicolaschiong/" target="_blank">
+              <i className="fab fa-linkedin" /> <span></span>
             </a>
-            <a href="#">
-              <i className="fab fa-facebook-f" />
-            </a>
-            <a href="#">
-              <i className="fab fa-instagram" />
-            </a>
-            <a href="#">
-              <i className="fab fa-pinterest-p" />
+            <a href="https://github.com/nicolaschiong" target="_blank">
+              <i className="fab fa-github" target="_blank" /> <span></span>
             </a>
           </div>
         </div>
       </section>
     </Fragment>
-  );
-};
-export default SideBar;
+  )
+}
+export default SideBar

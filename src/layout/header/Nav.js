@@ -9,7 +9,12 @@ const Nav = ({ singleMenu }) => {
           <div className="mobile-logo">
             <Link legacyBehavior href="/">
               <a>
-                <img src="assets/images/logos/logo.png" alt="Logo" title="Logo" />
+                <img
+                  src="assets/images/logos/nicolas-chiong-logo.svg"
+                  alt="Logo"
+                  title="Logo"
+                  width={160}
+                />
               </a>
             </Link>
           </div>
@@ -20,9 +25,9 @@ const Nav = ({ singleMenu }) => {
             <span className="icon-bar" />
           </Accordion.Toggle>
         </div>
-        <Accordion.Collapse eventKey="navbar-collapse" className="navbar-collapse clearfix">
+        {/* <Accordion.Collapse eventKey="navbar-collapse" className="navbar-collapse clearfix">
           <Menu singleMenu={singleMenu} />
-        </Accordion.Collapse>
+        </Accordion.Collapse> */}
       </Accordion>
     </nav>
   )

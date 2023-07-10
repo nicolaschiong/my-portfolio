@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Nav from "./Nav";
-import NavSearch from "./NavSearch";
+import Link from "next/link"
+import Nav from "./Nav"
+import NavSearch from "./NavSearch"
 
 const DefaultHeader = ({ singleMenu }) => {
   return (
-    <header className="main-header menu-absolute">
+    <header className="main-header menu-absolute mt-25 ">
       {/*Header-Upper*/}
       <div className="header-upper">
         <div className="container container-1620 clearfix">
@@ -14,9 +14,10 @@ const DefaultHeader = ({ singleMenu }) => {
                 <Link legacyBehavior href="/">
                   <a>
                     <img
-                      src="assets/images/logos/logo.png"
+                      src="assets/images/logos/nicolas-chiong-logo.svg"
                       alt="Logo"
                       title="Logo"
+                      width={161}
                     />
                   </a>
                 </Link>
@@ -32,17 +33,17 @@ const DefaultHeader = ({ singleMenu }) => {
             {/* Menu Button */}
             <div className="menu-btns">
               {/* menu sidbar */}
-              <div className="menu-sidebar">
+              {/* <div className="menu-sidebar">
                 <button>
                   <img src="assets/images/icons/toggler.svg" alt="Toggler" />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
       {/*End Header Upper*/}
     </header>
-  );
-};
-export default DefaultHeader;
+  )
+}
+export default DefaultHeader
