@@ -52,6 +52,17 @@ const Index = () => {
                 <Counter end={7} />
                 <span className="counter-title">Years of Experience</span>
               </div>
+              <div className="col-md-6">
+                <div className="form-group mb-0">
+                  <a
+                    href="https://cvws.icloud-content.com/B/AXesoPypq5QVKG_l_VH5t5nfcL5CAVZ4qO_FNENHwj1Yh8Uu0EqXMfqH/Resume+-+Nicolas+James+D.+Chiong+July+2023.pdf?o=AnMcMq6QoGAu7iYEB-JrQ-51lQ29OIKywAYsJPyA1axe&v=1&x=3&a=CAogtSXmufu9BwI6sbQxTYA4K8nLUt-fqpWI7c8mHl7-pF8SbxCI-N6YljEYiNW6mpYxIgEAUgTfcL5CWgSXMfqHaifAvP1dlMeOznKrR-fz9F74koZZyOVWZ01JECRXMPgdeH5YaA8POXNyJ1g3TKSAfmAQB5HcQ0vfLmd5cV3VQ9TI55HwPk3M_GAUNLxmyYoCfw&e=1689588247&fl=&r=f49891d2-495b-4d6d-a37e-28d4f296cf3b-1&k=0sPefwnDwUcMcLRdGDlMSw&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=146&s=Rp_HtvGWssHiyojV1ScWrXmNqFg&cd=i"
+                    className="theme-btn style-two w-100"
+                    target="_blank"
+                  >
+                    Download my CV <i className="far fa-arrow-right" />
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="col-xl-7 col-lg-9">
               <div className="about-content wow fadeInUp delay-0-4s">
@@ -201,7 +212,7 @@ const Index = () => {
               </div>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <Link legacyBehavior href="/projects" disabled>
+              <Link legacyBehavior href="#" disabled>
                 <a className="theme-btn mb-25 wow fadeInRight delay-0-2s">
                   View More Projects <i className="far fa-arrow-right" />
                 </a>
@@ -212,27 +223,27 @@ const Index = () => {
             <div className="content">
               <span className="serial-number">01</span>
               <h4>
-                <Link legacyBehavior href="/project-details">
+                <a legacyBehavior href="https://labsavvy.com/" target="_blank">
                   <a>LabSavvy - Web and Mobile Health App</a>
-                </Link>
+                </a>
               </h4>
             </div>
             <div className="image">
               <img src="assets/images/projects/project-labsavvy1.png" alt="Labsavvy" width={400} />
             </div>
-            <div className="right-btn">
-              <Link legacyBehavior href="/project-details">
+            {/* <div className="right-btn">
+              <Link legacyBehavior href="#">
                 <a className="details-btn">
                   <i className="fal fa-long-arrow-right" />
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="project-timeline wow fadeInUp delay-0-2s">
             <div className="content">
               <span className="serial-number">02</span>
               <h4>
-                <Link legacyBehavior href="/project-details">
+                <Link legacyBehavior href="#">
                   <a>TaskUp - Task Management App</a>
                 </Link>
               </h4>
@@ -243,36 +254,61 @@ const Index = () => {
                 alt="Project TimeLine Image"
               />
             </div>
-            <div className="right-btn">
-              <Link legacyBehavior href="/project-details">
+            {/* <div className="right-btn">
+              <Link legacyBehavior href="#">
                 <a className="details-btn">
                   <i className="fal fa-long-arrow-right" />
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="project-timeline wow fadeInUp delay-0-2s">
             <div className="content">
               <span className="serial-number">03</span>
               <h4>
-                <Link legacyBehavior href="/project-details">
-                  <a>Mobile Application Design &amp; Development</a>
+                <Link legacyBehavior href="#">
+                  <a>Navigation Page Builder for Results at Hand</a>
                 </Link>
               </h4>
             </div>
             <div className="image">
               <img
-                src="assets/images/projects/project-timeline3.jpg"
+                src="assets/images/projects/project-navbuilder-rh.png"
                 alt="Project TimeLine Image"
+                width={400}
               />
             </div>
-            <div className="right-btn">
+            {/* <div className="right-btn">
               <Link legacyBehavior href="/project-details">
                 <a className="details-btn">
                   <i className="fal fa-long-arrow-right" />
                 </a>
               </Link>
+            </div> */}
+          </div>
+          <div className="project-timeline wow fadeInUp delay-0-2s">
+            <div className="content">
+              <span className="serial-number">04</span>
+              <h4>
+                <a legacyBehavior href="https://veggiego-d20b9.web.app/dashboard" target="_blank">
+                  <a>Veggie-go Inventory Web app and Delivery Mobile App</a>
+                </a>
+              </h4>
             </div>
+            <div className="image">
+              <img
+                src="assets/images/projects/project-veggiego1.png"
+                alt="Project TimeLine Image"
+                width={500}
+              />
+            </div>
+            {/* <div className="right-btn">
+              <Link legacyBehavior href="/project-details">
+                <a className="details-btn">
+                  <i className="fal fa-long-arrow-right" />
+                </a>
+              </Link>
+            </div> */}
           </div>
         </div>
       </section>
@@ -294,16 +330,14 @@ const Index = () => {
       <section className="testimonials-two-area pt-70 rpt-50">
         <div className="container">
           <div className="testimonial-two-part">
-            <div className="circle-text text-center mb-75">
-              <img src="assets/images/testimonials/circle-text.png" alt="Circle Text" />
-            </div>
             <Slider {...sliderProps.testimonialsTwoActive} className="testimonials-two-active">
               <div className="testimonial-item style-two">
                 <div className="author-speech">
                   <p>
-                    <span className="quote">“</span> On the other hand we denounce with righteous
-                    indignation and dislike men beguiled demoralized charms offset pleasure moments
-                    line desire that they cannot foresee pain and trouble that boon
+                    <span className="quote">“</span> I have worked with Nicolas on a previous
+                    project. He is a highly motivated and eager to learn more. Dedicated,
+                    hardworking and broad-minded. Nicolas is a great project resource with a great
+                    skill to analyze and summarize ideas.
                     <span className="quote right-quote">“</span>
                   </p>
                 </div>
@@ -311,28 +345,33 @@ const Index = () => {
                 <div className="testimonial-footer">
                   <div className="testimonial-author">
                     <div className="author-image">
-                      <img src="assets/images/testimonials/author1.png" alt="Author Image" />
+                      <img src="assets/images/testimonials/1677496069095.jpeg" alt="Author Image" />
                     </div>
                     <div className="author-info">
-                      <h4>James N. Johnson</h4>
-                      <span className="designation">CEO &amp; Founder</span>
+                      <h4>Jesserine Lopez</h4>
+                      <span className="designation">Software Developer</span>
                     </div>
-                  </div>
-                  <div className="ratting style-two">
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star-half-alt" />
                   </div>
                 </div>
               </div>
               <div className="testimonial-item style-two">
-                <div className="author-speech">
+                <div className="author-speech-2">
                   <p>
-                    <span className="quote">“</span> On the other hand we denounce with righteous
-                    indignation and dislike men beguiled demoralized charms offset pleasure moments
-                    line desire that they cannot foresee pain and trouble that boon{" "}
+                    <span className="quote">“</span> Nicolas is a kind, tolerant, considerate,
+                    understanding, honest, resilient and reliable person, that can bring great value
+                    to any team in all of technical skills, soft skills, positive culture and human
+                    traits. He is a great software engineer with a broad and strong skillset capable
+                    of addressing any front-end challenges, from structural application and
+                    architectural matters, to frameworks and libraries, custom components and
+                    testability, themes, custom graphical resources and branding, and UI/UX,
+                    providing a smooth experience both for the users and other fellow developers.
+                    His skillset and interests continue on and go beyond and into other fields such
+                    as data science and artificial intelligence. He reports with detail, with images
+                    and animations that easily allow any manager to understand status, progress and
+                    highlights. His vast knowledge, clarity of thought, accessibility and
+                    helpfulness make it easy and a pleasure to work with him. Nicolas is an
+                    excellent software engineer. Working with him is easy and a pleasure, and he is
+                    a great teammate for any software development team, project and/or company.
                     <span className="quote right-quote">“</span>
                   </p>
                 </div>
@@ -340,77 +379,12 @@ const Index = () => {
                 <div className="testimonial-footer">
                   <div className="testimonial-author">
                     <div className="author-image">
-                      <img src="assets/images/testimonials/author1.png" alt="Author Image" />
+                      <img src="assets/images/testimonials/1517462786937.jpeg" alt="Author Image" />
                     </div>
                     <div className="author-info">
-                      <h4>James N. Johnson</h4>
-                      <span className="designation">CEO &amp; Founder</span>
+                      <h4>Luis Miguel Serrano</h4>
+                      <span className="designation">Software Engineer</span>
                     </div>
-                  </div>
-                  <div className="ratting style-two">
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star-half-alt" />
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-item style-two">
-                <div className="author-speech">
-                  <p>
-                    <span className="quote">“</span> On the other hand we denounce with righteous
-                    indignation and dislike men beguiled demoralized charms offset pleasure moments
-                    line desire that they cannot foresee pain and trouble that boon{" "}
-                    <span className="quote right-quote">“</span>
-                  </p>
-                </div>
-                <hr />
-                <div className="testimonial-footer">
-                  <div className="testimonial-author">
-                    <div className="author-image">
-                      <img src="assets/images/testimonials/author1.png" alt="Author Image" />
-                    </div>
-                    <div className="author-info">
-                      <h4>James N. Johnson</h4>
-                      <span className="designation">CEO &amp; Founder</span>
-                    </div>
-                  </div>
-                  <div className="ratting style-two">
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star-half-alt" />
-                  </div>
-                </div>
-              </div>
-              <div className="testimonial-item style-two">
-                <div className="author-speech">
-                  <p>
-                    <span className="quote">“</span> On the other hand we denounce with righteous
-                    indignation and dislike men beguiled demoralized charms offset pleasure moments
-                    line desire that they cannot foresee pain and trouble that boon{" "}
-                    <span className="quote right-quote">“</span>
-                  </p>
-                </div>
-                <hr />
-                <div className="testimonial-footer">
-                  <div className="testimonial-author">
-                    <div className="author-image">
-                      <img src="assets/images/testimonials/author1.png" alt="Author Image" />
-                    </div>
-                    <div className="author-info">
-                      <h4>James N. Johnson</h4>
-                      <span className="designation">CEO &amp; Founder</span>
-                    </div>
-                  </div>
-                  <div className="ratting style-two">
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star" />
-                    <i className="fas fa-star-half-alt" />
                   </div>
                 </div>
               </div>

@@ -10650,6 +10650,14 @@ blockquote .blockquote-footer:before {
   font-weight: 500;
   line-height: 1.67;
 }
+
+.author-speech-2 {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.67;
+}
+
 @media only screen and (max-width: 767px) {
   .author-speech {
     font-size: 16px;

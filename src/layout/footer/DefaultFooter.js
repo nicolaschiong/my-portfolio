@@ -44,12 +44,12 @@ const DefaultFooter = () => {
                   njcolaschiong@gmail.com <i className="far fa-arrow-right" />
                 </a>
                 <a className="theme-btn style-three phone-number" href="callto:+6591365437">
-                  +65 9136 5437 <i className="far fa-arrow-right" />
+                  +65 8437 5182 <i className="far fa-arrow-right" />
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          {/* <div className="col-lg-4">
             <div className="footer-right-content">
               <h4 className="footer-title wow fadeInUp delay-0-2s animated">Quick Links</h4>
               <div className="footer-widget widget_nav_menu">
@@ -105,13 +105,13 @@ const DefaultFooter = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="footer-bottom">
           <div className="row align-items-center">
             <div className="col-xl-8 col-lg-6">
               <div className="footer-bottom-menu pt-40 pb-35 rpb-0 wow fadeInRight delay-0-2s animated">
-                <ul>
+                {/* <ul>
                   <li>
                     <Link legacyBehavior href="/about">
                       <a>About</a>
@@ -132,13 +132,13 @@ const DefaultFooter = () => {
                       How IT Works
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="col-xl-4 col-lg-6">
               <div className="copyright-text text-lg-end pt-40 pb-35 rpt-10 wow fadeInLeft delay-0-2s animated">
                 <p>
-                  Copyright @2023,{" "}
+                  Copyright @{new Date().getFullYear()},{" "}
                   <Link legacyBehavior href="/">
                     <a>Nicolas Chiong</a>
                   </Link>{" "}

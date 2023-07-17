@@ -19,11 +19,11 @@ const Nav = ({ singleMenu }) => {
             </Link>
           </div>
           {/* Toggle Button */}
-          <Accordion.Toggle as={"button"} className="navbar-toggle" eventKey="navbar-collapse">
+          {/* <Accordion.Toggle as={"button"} className="navbar-toggle" eventKey="navbar-collapse">
             <span className="icon-bar" />
             <span className="icon-bar" />
             <span className="icon-bar" />
-          </Accordion.Toggle>
+          </Accordion.Toggle> */}
         </div>
         {/* <Accordion.Collapse eventKey="navbar-collapse" className="navbar-collapse clearfix">
           <Menu singleMenu={singleMenu} />
