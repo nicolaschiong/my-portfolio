@@ -1,6 +1,7 @@
 import PreLoader from "@/src/layout/PreLoader"
 import "@/styles/globals.css"
 import Head from "next/head"
+import Script from "next/script"
 import { Fragment, useEffect, useState } from "react"
 
 export default function App({ Component, pageProps }) {
@@ -26,12 +27,17 @@ export default function App({ Component, pageProps }) {
           href="assets/images/profile-pic-nicolas-chiong.jpeg"
           type="image/x-icon"
         />
-        {/*  Google tag (gtag.js)  */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5N3PGD66Y"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-P5N3PGD66Y');
-        </script>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-P5N3PGD66Y" />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P5N3PGD66Y');
+          `}
+        </Script>
         {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
