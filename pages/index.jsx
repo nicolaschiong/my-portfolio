@@ -303,14 +303,14 @@ const Index = () => {
                 width={500}
               />
             </div>
-            <div className="right-btn">
+            {/* <div className="right-btn">
               <Link legacyBehavior href="/project-details">
                 <a className="details-btn">
-                  {/* <i className="fal fa-long-arrow-right" /> */}
+                  <i className="fal fa-long-arrow-right" />
                   Demo
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
