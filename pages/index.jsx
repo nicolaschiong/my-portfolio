@@ -46,16 +46,16 @@ const Index = () => {
       <section className="about-area pt-130 rpt-100 rel z-1">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-xl-5 col-lg-3">
+            <div className="col-xl-5 col-lg-3 mb-40">
               <div className="counter-item counter-text-wrap wow fadeInUp delay-0-2s">
                 <i className="fal fa-check-circle" />
                 <Counter end={7} />
-                <span className="counter-title">Years of Experience</span>
+                <span className="counter-title">Years of Web Development Experience</span>
               </div>
               <div className="col-md-6">
-                <div className="form-group mb-0">
+                <div className="form-group mb-10 mt-10">
                   <a
-                    href="https://cvws.icloud-content.com/B/AXesoPypq5QVKG_l_VH5t5nfcL5CAVZ4qO_FNENHwj1Yh8Uu0EqXMfqH/Resume+-+Nicolas+James+D.+Chiong+July+2023.pdf?o=AnMcMq6QoGAu7iYEB-JrQ-51lQ29OIKywAYsJPyA1axe&v=1&x=3&a=CAogtSXmufu9BwI6sbQxTYA4K8nLUt-fqpWI7c8mHl7-pF8SbxCI-N6YljEYiNW6mpYxIgEAUgTfcL5CWgSXMfqHaifAvP1dlMeOznKrR-fz9F74koZZyOVWZ01JECRXMPgdeH5YaA8POXNyJ1g3TKSAfmAQB5HcQ0vfLmd5cV3VQ9TI55HwPk3M_GAUNLxmyYoCfw&e=1689588247&fl=&r=f49891d2-495b-4d6d-a37e-28d4f296cf3b-1&k=0sPefwnDwUcMcLRdGDlMSw&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=146&s=Rp_HtvGWssHiyojV1ScWrXmNqFg&cd=i"
+                    href="https://drive.google.com/file/d/1hWgKw0nm4YBNaHJS7-C1d4fPaQC_qPB4/view?usp=sharing"
                     className="theme-btn style-two w-100"
                     target="_blank"
                   >
@@ -68,15 +68,16 @@ const Index = () => {
               <div className="about-content wow fadeInUp delay-0-4s">
                 <div className="section-title mb-40">
                   <span className="sub-title mb-15">About Me</span>
-                  <h2>Focus on Frontend development</h2>
+                  <h2></h2>
                 </div>
                 <div className="content">
                   <p>
                     I am eager to bring my expertise in developing high-quality
-                    <b> ReactJS/Typescript </b>web applications. With a strong background in
-                    utilizing my resourcefulness and problem-solving skills to create impactful
-                    solutions, I am confident in my ability to make a valuable contribution to your
-                    team and deliver meaningful results for both your company and clients.
+                    <b> ReactJS/Typescript </b>web applications with great attention to detail. With
+                    a strong background in utilizing my resourcefulness and problem-solving skills
+                    to create impactful solutions, I am confident in my ability to make a valuable
+                    contribution to your team and deliver meaningful results for both your company
+                    and clients.
                   </p>
                 </div>
               </div>
@@ -223,9 +224,9 @@ const Index = () => {
             <div className="content">
               <span className="serial-number">01</span>
               <h4>
-                <a legacyBehavior href="https://labsavvy.com/" target="_blank">
+                <Link legacyBehavior href="" target="_blank">
                   <a>LabSavvy - Web and Mobile Health App</a>
-                </a>
+                </Link>
               </h4>
             </div>
             <div className="image">
@@ -302,13 +303,14 @@ const Index = () => {
                 width={500}
               />
             </div>
-            {/* <div className="right-btn">
+            <div className="right-btn">
               <Link legacyBehavior href="/project-details">
                 <a className="details-btn">
-                  <i className="fal fa-long-arrow-right" />
+                  {/* <i className="fal fa-long-arrow-right" /> */}
+                  Demo
                 </a>
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

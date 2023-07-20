@@ -1,5 +1,5 @@
-import Layout from "@/src/layout/Layout";
-import Link from "next/link";
+import Layout from "@/src/layout/Layout"
+import Link from "next/link"
 const E404 = () => {
   return (
     <Layout>
@@ -11,9 +11,9 @@ const E404 = () => {
           <div className="row align-items-center">
             <div className="col-lg-5">
               <div className="error-content rmb-55 wow fadeInRight delay-0-2s">
-                <h1>OPPS!</h1>
+                <h1>Oh no!</h1>
                 <div className="section-title mb-50 rmb-35">
-                  <h2>This Page Are Can't Be Found</h2>
+                  <h2>You may be lost</h2>
                 </div>
                 <Link legacyBehavior href="/">
                   <a className="theme-btn style-two">
@@ -21,24 +21,18 @@ const E404 = () => {
                   </a>
                 </Link>
                 <div className="social-style-four d-flex mt-60 rmt-35">
-                  <a href="#">
-                    <i className="fab fa-facebook-f" /> <span>Facebook</span>
+                  <a href="https://www.linkedin.com/in/nicolaschiong/">
+                    <i className="fab fa-linkedin" /> <span>Linkedin</span>
                   </a>
-                  <a href="#">
-                    <i className="fab fa-twitter" /> <span>Twitter</span>
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-dribbble" /> <span>Dribbble</span>
+                  <a href="https://github.com/nicolaschiong">
+                    <i className="fab fa-github" /> <span>Github</span>
                   </a>
                 </div>
               </div>
             </div>
             <div className="col-lg-7">
               <div className="error-image wow zoomIn delay-0-2s">
-                <img
-                  src="assets/images/background/404-error.png"
-                  alt="404 Error"
-                />
+                <img src="assets/images/background/404-error.png" alt="404 Error" />
               </div>
             </div>
           </div>
@@ -46,6 +40,6 @@ const E404 = () => {
       </section>
       {/* 404 Error Section End */}
     </Layout>
-  );
-};
-export default E404;
+  )
+}
+export default E404
