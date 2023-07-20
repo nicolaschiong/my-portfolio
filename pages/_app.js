@@ -27,17 +27,7 @@ export default function App({ Component, pageProps }) {
           href="assets/images/profile-pic-nicolas-chiong.jpeg"
           type="image/x-icon"
         />
-        {/* <!-- Google tag (gtag.js) --> */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-P5N3PGD66Y" />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
 
-            gtag('config', 'G-P5N3PGD66Y');
-          `}
-        </Script>
         {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -60,6 +50,16 @@ export default function App({ Component, pageProps }) {
         {/* Main Style */}
         <link rel="stylesheet" href="assets/css/style.css" />
       </Head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-P5N3PGD66Y" />
+      <Script id="google-f">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-P5N3PGD66Y');
+          `}
+      </Script>
       {!loaded && <PreLoader />}
       {loaded && <Component {...pageProps} />}
     </Fragment>
