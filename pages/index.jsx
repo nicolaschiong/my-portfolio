@@ -1,49 +1,87 @@
+import { useState, useEffect } from "react"
 import dynamic from "next/dynamic"
+import "@fontsource-variable/montserrat"
 
-const Counter = dynamic(() => import("@/src/components/Counter"), {
+const Counter = dynamic(() => import("../src/components/Counter"), {
   ssr: false,
 })
-import Layout from "@/src/layout/Layout"
-import { sliderProps } from "@/src/sliderProps"
+import Layout from "../src/layout/Layout"
+import { sliderProps } from "../src/sliderProps"
 import Link from "next/link"
 import Slider from "react-slick"
+import styled from "@emotion/styled"
+
+const HeroSectionStyled = styled.div`
+  h1 {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+`
 
 const Index = () => {
+  const [projectData, setProjectData] = useState([])
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/api/projects")
+      const data = await response.json()
+      setProjectData(data)
+    } catch (error) {
+      console.error("Error fetching data:", error)
+    }
+  }
+
   return (
     <Layout>
-      {/* Hero Section Start */}
-      <section className="hero-area pt-185 rpt-150 rel z-1">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="hero-content wow fadeInLeft delay-0-2s">
-                <h1>
-                  Nicolas <span>Chiong</span>
+      <HeroSectionStyled>
+        <section
+          className="page-banner pt-210 rpt-150 pb-45 rpb-50 rel z-1"
+          style={{ backgroundImage: "url(assets/images/hero/hero-two-bg.png)" }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-10 col-lg-11">
+                <h1 className="hero-title mb-100 rmb-50 wow fadeInUp delay-0-2s">
+                  Hello, I'm Nicolas Chiong
+                  <span className="arrow">
+                    <img
+                      className="wow fadeInLeft delay-0-6s"
+                      src="assets/images/hero/title-arrow.png"
+                      alt="Arrow"
+                    />
+                  </span>
+                  <p>Passionate frontend developer crafting seamless experiences.</p>
                 </h1>
+
+                <div className="col-lg-8 ">
+                  <div className="social-style-four mb-20 wow fadeInLeft delay-0-2s animated">
+                    <a href="https://www.linkedin.com/in/nicolaschiong/" target="_blank">
+                      <i className="fab fa-linkedin" /> <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/nicolaschiong" target="_blank">
+                      <i className="fab fa-github" target="_blank" /> <span>Github</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="container-fluid">
-          <div className="hero-bottom-image">
-            <img src="assets/images/hero/hero-four-crop.png" alt="Hero" />
-            <div className="hero-social">
-              <a href="https://www.linkedin.com/in/nicolaschiong/" target="_blank">
-                <i className="fab fa-linkedin" /> <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/nicolaschiong" target="_blank">
-                <i className="fab fa-github" target="_blank" /> <span>Github</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="hero-bg">
-          <img src="assets/images/hero/hero-bg.png" alt="lines" />
-        </div>
-      </section>
+        </section>
+      </HeroSectionStyled>
+
       {/* Hero Section End */}
       {/* About Us Area start */}
-      <section className="about-area pt-130 rpt-100 rel z-1">
+      <section className="hero-area pt-130 rpt-100 rel z-1">
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-xl-5 col-lg-3 mb-40">
@@ -72,12 +110,9 @@ const Index = () => {
                 </div>
                 <div className="content">
                   <p>
-                    I am eager to bring my expertise in developing high-quality
-                    <b> ReactJS/Typescript </b>web applications with great attention to detail. With
-                    a strong background in utilizing my resourcefulness and problem-solving skills
-                    to create impactful solutions, I am confident in my ability to make a valuable
-                    contribution to your team and deliver meaningful results for both your company
-                    and clients.
+                    Hello everyone, I'm Nick, a passionate web developer with an eye for frontend
+                    development. Throughout my journey, I've immersed myself in various web
+                    development projects, honing my skills and embracing the latest technologies.
                   </p>
                 </div>
               </div>
@@ -201,117 +236,74 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Headline Area end */}
-      {/* Project Timeline Area start */}
-      <section className="project-timeline-area pt-90 rpt-75 rel z-1">
-        <div className="container container-1290">
-          <div className="row justify-content-between align-items-center pb-25">
-            <div className="col-xl-6 col-lg-8">
-              <div className="section-title mb-30 wow fadeInLeft delay-0-2s">
-                <span className="sub-title mb-15">Recent Projects</span>
-                <h2>Project Showcase</h2>
-              </div>
-            </div>
-            <div className="col-lg-4 text-lg-end">
-              <Link legacyBehavior href="#" disabled>
-                <a className="theme-btn mb-25 wow fadeInRight delay-0-2s">
-                  View More Projects <i className="far fa-arrow-right" />
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="project-timeline wow fadeInUp delay-0-2s">
-            <div className="content">
-              <span className="serial-number">01</span>
-              <h4>
-                <Link legacyBehavior href="" target="_blank">
-                  <a>LabSavvy - Web and Mobile Health App</a>
-                </Link>
-              </h4>
-            </div>
-            <div className="image">
-              <img src="assets/images/projects/project-labsavvy1.png" alt="Labsavvy" width={400} />
-            </div>
-            {/* <div className="right-btn">
-              <Link legacyBehavior href="#">
-                <a className="details-btn">
-                  <i className="fal fa-long-arrow-right" />
-                </a>
-              </Link>
-            </div> */}
-          </div>
-          <div className="project-timeline wow fadeInUp delay-0-2s">
-            <div className="content">
-              <span className="serial-number">02</span>
-              <h4>
-                <Link legacyBehavior href="#">
-                  <a>TaskUp - Task Management App</a>
-                </Link>
-              </h4>
-            </div>
-            <div className="image">
-              <img
-                src="assets/images/projects/project-timeline2.jpg"
-                alt="Project TimeLine Image"
-              />
-            </div>
-            {/* <div className="right-btn">
-              <Link legacyBehavior href="#">
-                <a className="details-btn">
-                  <i className="fal fa-long-arrow-right" />
-                </a>
-              </Link>
-            </div> */}
-          </div>
-          <div className="project-timeline wow fadeInUp delay-0-2s">
-            <div className="content">
-              <span className="serial-number">03</span>
-              <h4>
-                <Link legacyBehavior href="#">
-                  <a>Navigation Page Builder for Results at Hand</a>
-                </Link>
-              </h4>
-            </div>
-            <div className="image">
-              <img
-                src="assets/images/projects/project-navbuilder-rh.png"
-                alt="Project TimeLine Image"
-                width={400}
-              />
-            </div>
-            {/* <div className="right-btn">
-              <Link legacyBehavior href="/project-details">
-                <a className="details-btn">
-                  <i className="fal fa-long-arrow-right" />
-                </a>
-              </Link>
-            </div> */}
-          </div>
-          <div className="project-timeline wow fadeInUp delay-0-2s">
-            <div className="content">
-              <span className="serial-number">04</span>
-              <h4>
-                <a legacyBehavior href="https://veggiego-d20b9.web.app/dashboard" target="_blank">
-                  <a>Veggie-go Inventory Web app and Delivery Mobile App</a>
-                </a>
-              </h4>
-            </div>
-            <div className="image">
-              <img
-                src="assets/images/projects/project-veggiego1.png"
-                alt="Project TimeLine Image"
-                width={500}
-              />
-            </div>
-            {/* <div className="right-btn">
-              <Link legacyBehavior href="/project-details">
-                <a className="details-btn">
-                  <i className="fal fa-long-arrow-right" />
-                  Demo
-                </a>
-              </Link>
-            </div> */}
-          </div>
+      <section className="project-list-area pt-130 rpt-100 pb-10 rpb-25">
+        <div className="container">
+          {projectData?.map((project, index) => {
+            if (index % 2 === 0) {
+              return (
+                <div className="project-item style-two">
+                  <div className="image wow fadeInLeft delay-0-2s">
+                    <img src="assets/images/projects/labsavvy-mobile.png" alt="Project List" />
+                    <Link legacyBehavior href={`/project/${project?.slug}`}>
+                      <a className="project-btn">
+                        <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="content wow fadeInRight delay-0-2s">
+                    <p className="category">{project?.projectType}</p>
+                    <h2>
+                      <Link legacyBehavior href={`/project/${project?.slug}`}>
+                        <a>
+                          {project?.name} <i>{project?.appType}</i>
+                        </a>
+                      </Link>
+                    </h2>
+                    <hr />
+                    <p>{project?.description}</p>
+                    <Link legacyBehavior href={`/project/${project?.slug}`}>
+                      <a className="read-more">
+                        Project Details <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              )
+            } else if (index % 2 !== 0) {
+              return (
+                <div className="project-item style-two">
+                  <div className="content wow fadeInLeft delay-0-2s">
+                    <Link legacyBehavior href="/project">
+                      <a className="category">{project?.projectType}</a>
+                    </Link>
+                    <h2>
+                      <Link legacyBehavior href={`/project/${project?.slug}`}>
+                        <a>
+                          {project?.name} <i>{project?.appType}</i>
+                        </a>
+                      </Link>
+                    </h2>
+                    <hr />
+                    <p>{project?.description}</p>
+
+                    <Link legacyBehavior href={`/project/${project?.slug}`}>
+                      <a className="read-more">
+                        Project Details <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="image wow fadeInRight delay-0-2s">
+                    <img src="assets/images/projects/project-list2.jpg" alt="Project List" />
+                    <Link legacyBehavior href={`/project/${project?.slug}`}>
+                      <a className="project-btn">
+                        <i className="far fa-arrow-right" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              )
+            }
+          })}
         </div>
       </section>
 

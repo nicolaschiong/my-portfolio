@@ -5,7 +5,7 @@ const DefaultFooter = () => {
     <footer
       className="main-footer rel z-1"
       style={{
-        backgroundImage: "url(assets/images/footer/footer-bg-shape.png)",
+        backgroundImage: "url(../assets/images/footer/footer-bg-shape.png)",
       }}
     >
       <div className="container container-1290">
@@ -15,7 +15,7 @@ const DefaultFooter = () => {
               <div className="footer-logo mb-20 wow fadeInRight delay-0-2s animated">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img src="assets/images/logos/nicolas-chiong-logo.svg" alt="Logo" />
+                    <img src="../assets/images/logos/nicolas-chiong-logo.svg" alt="Logo" />
                   </a>
                 </Link>
               </div>
@@ -36,7 +36,7 @@ const DefaultFooter = () => {
           <div className="col-lg-8">
             <div className="footer-left-content pt-80">
               <div className="lets-work mb-50 wow fadeInUp delay-0-2s animated">
-                <img src="assets/images/profile-pic-nicolas-chiong.jpeg" alt="Let's Work Man" />
+                <img src="../assets/images/profile-pic-nicolas-chiong.jpeg" alt="Let's Work Man" />
                 <span>Let’s Work Together</span>
               </div>
               <div className="footer-contact-info wow fadeInUp delay-0-3s animated">

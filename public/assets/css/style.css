@@ -5,40 +5,6 @@
     Author URI: https://nicolaschiong.com
     Version: 1.0
 
-    Note: This is Main Style CSS File. */
-/*----------------------------------------------------------------------
-	CSS INDEX
-	----------------------
-
-    ## Default Style
-    ## Common Classes
-    ## Repeat Style
-    ## Padding Margin
-    ## Custom Animation
-    ## Header style
-    ## Hero Area
-    ## Headline Text
-    ## Page Banner
-    ## About Area
-    ## Service Area
-    ## Blog Area
-    ## Contact Forms
-    ## Counter Area
-    ## Videos Area
-    ## Team Member
-    ## Pricing Area
-    ## Project Grid Area
-    ## FAQs Area
-    ## Features Area
-    ## Shop Area
-    ## Work Process Area
-    ## Skills Area
-    ## CTA Area
-    ## Testimonials Area
-    ## Client Logo Area
-    ## Sidebar Widgets
-    ## Error Area
-    ## Main Footer */
 /* -------------------------------------------------------------- */
 /*******************************************************/
 /******************* ## Default Style ******************/
@@ -59,8 +25,8 @@ body {
   line-height: 32px;
   font-size: 16px;
   font-family: var(--njc-primary-font);
-  --njc-primary-font: Inter;
-  --njc-secondary-font: Inter;
+  --njc-primary-font: "Montserrat Variable", sans-serif;
+  --njc-secondary-font: "Montserrat Variable", sans-serif;
   --njc-primary-color: #fabd00;
   --njc-secondary-color: #ffffff;
   --njc-tertiary-color: #16161c;

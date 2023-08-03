@@ -10,7 +10,7 @@ const Nav = ({ singleMenu }) => {
             <Link legacyBehavior href="/">
               <a>
                 <img
-                  src="assets/images/logos/nicolas-chiong-logo.svg"
+                  src="../assets/images/logos/nicolas-chiong-logo.svg"
                   alt="Logo"
                   title="Logo"
                   width={160}
