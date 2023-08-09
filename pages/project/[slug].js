@@ -16,7 +16,7 @@ export default function Page() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/projects")
+      const response = await fetch("/api/hello")
       const data = await response.json()
       setData(data)
     } catch (error) {
@@ -44,7 +44,7 @@ export default function Page() {
               <span>
                 <img
                   src={`../assets/images/projects/${projectData?.projectLogo}-logo.png`}
-                  alt="Project"
+                  alt="client-logo"
                   height={150}
                 />
               </span>
@@ -58,7 +58,10 @@ export default function Page() {
       <div className="project-details-image rel z-1">
         <div className="container-fluid">
           <div className="image wow fadeInUp delay-0-2s">
-            <img src="../assets/images/projects/project-labsavvy-hero.png" alt="Project" />
+            <img
+              src={`../assets/images/projects/project-${projectData?.projectLogo}-hero.png`}
+              alt="project-hero"
+            />
           </div>
         </div>
       </div>
@@ -81,8 +84,8 @@ export default function Page() {
                   <p className="sub-title mb-20">{projectData?.appType} </p>
                 </div>
                 <div className="col">
-                  <h5>Project Start</h5>
-                  <p className="sub-title mb-20">{projectData?.projectStart}</p>
+                  <h5>Industry</h5>
+                  <p className="sub-title mb-20">{projectData?.industry}</p>
                 </div>
                 <div className="col">
                   <h5>Location</h5>
@@ -138,7 +141,10 @@ export default function Page() {
           <div className="row">
             <div className="col-lg-6">
               <div className="image mb-30 wow fadeInUp delay-0-2s">
-                <img src="../assets/images/projects/project-middle1.jpg" alt="Project" />
+                <img
+                  src={`../assets/images/projects/${projectData?.slug}-thumbnail.png`}
+                  alt="Project"
+                />
               </div>
             </div>
             <div className="col-lg-6">

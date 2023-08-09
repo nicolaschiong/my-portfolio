@@ -33,7 +33,7 @@ const Index = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/projects")
+      const response = await fetch("/api/hello")
       const data = await response.json()
       setProjectData(data)
     } catch (error) {
@@ -60,7 +60,7 @@ const Index = () => {
                       alt="Arrow"
                     />
                   </span>
-                  <p>Passionate frontend developer crafting seamless experiences.</p>
+                  <p>Software Engineer for React JS, Typescript</p>
                 </h1>
 
                 <div className="col-lg-8 ">
@@ -243,7 +243,10 @@ const Index = () => {
               return (
                 <div className="project-item style-two">
                   <div className="image wow fadeInLeft delay-0-2s">
-                    <img src="assets/images/projects/labsavvy-mobile.png" alt="Project List" />
+                    <img
+                      src={`assets/images/projects/${project?.slug}-thumbnail.png`}
+                      alt={project?.name}
+                    />
                     <Link legacyBehavior href={`/project/${project?.slug}`}>
                       <a className="project-btn">
                         <i className="far fa-arrow-right" />
@@ -293,7 +296,10 @@ const Index = () => {
                     </Link>
                   </div>
                   <div className="image wow fadeInRight delay-0-2s">
-                    <img src="assets/images/projects/project-list2.jpg" alt="Project List" />
+                    <img
+                      src={`assets/images/projects/${project?.slug}-thumbnail.png`}
+                      alt={project?.name}
+                    />{" "}
                     <Link legacyBehavior href={`/project/${project?.slug}`}>
                       <a className="project-btn">
                         <i className="far fa-arrow-right" />
@@ -306,18 +312,6 @@ const Index = () => {
           })}
         </div>
       </section>
-
-      {/* Why Choose Us Area end */}
-      {/* Headline area start */}
-      {/* <div className="headline-area pt-60 rpt-50 rel z-1">
-        <div className="container-fluid">
-          <div className="headline-text marquee">
-            <span>
-              <span>Feedback</span> Feedback
-            </span>
-          </div>
-        </div>
-      </div> */}
 
       {/* Headline Area end */}
       {/* Testimonial Area start */}

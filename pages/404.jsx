@@ -32,7 +32,7 @@ const E404 = () => {
             </div>
             <div className="col-lg-7">
               <div className="error-image wow zoomIn delay-0-2s">
-                <img src="assets/images/background/404-error.png" alt="404 Error" />
+                <img src="../assets/images/background/404-error.png" alt="404 Error" />
               </div>
             </div>
           </div>
