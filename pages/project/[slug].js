@@ -59,7 +59,7 @@ export default function Page() {
         <div className="container-fluid">
           <div className="image wow fadeInUp delay-0-2s">
             <img
-              src={`../assets/images/projects/project-${projectData?.projectLogo}-hero.png`}
+              src={`../assets/images/projects/${projectData?.slug}-hero.png`}
               alt="project-hero"
             />
           </div>
@@ -149,28 +149,48 @@ export default function Page() {
             </div>
             <div className="col-lg-6">
               <div className="image mb-30 wow fadeInUp delay-0-4s">
-                <img src="../assets/images/projects/project-middle2.jpg" alt="Project" />
+                <img
+                  src={`../assets/images/projects/${projectData?.slug}-thumbnail2.png`}
+                  alt="Project"
+                />{" "}
               </div>
             </div>
           </div>
-
-          <div className="row pt-50 pb-70 wow fadeInUp delay-0-2s">
-            <div className="col-lg-4">
-              <h3 className="title mb-30">The Challenge</h3>
+          {projectData?.theChallenges && (
+            <div className="row pt-50 pb-70 wow fadeInUp delay-0-2s">
+              <div className="col-lg-4">
+                <h3 className="title mb-30">The Challenge</h3>
+              </div>
+              <div className="col-lg-8">
+                <div className="big-letter text">{projectData?.theChallenges}</div>
+              </div>
             </div>
-            <div className="col-lg-8">
-              <div className="big-letter text">{projectData?.theChallenges}</div>
+          )}
+          {projectData?.theResult && (
+            <div className="row pt-40 pb-105 rpb-80 wow fadeInUp delay-0-2s">
+              <div className="col-lg-4">
+                <h3 className="title mb-30">Solution</h3>
+              </div>
+              <div className="col-lg-8">
+                <div className="big-letter text">{projectData?.theResult}</div>
+              </div>
             </div>
-          </div>
-
-          <div className="row pt-40 pb-105 rpb-80 wow fadeInUp delay-0-2s">
-            <div className="col-lg-4">
-              <h3 className="title mb-30">Solution</h3>
+          )}
+          {projectData?.references && (
+            <div className="row pt-40 pb-105 rpb-80 wow fadeInUp delay-0-2s">
+              <div className="col-lg-4">
+                <h3 className="title mb-30">References</h3>
+              </div>
+              <div className="col-lg-8">
+                <div className="big-letter text">{projectData?.theResult}</div>
+                <ul>
+                  {projectData?.references.map((reference) => {
+                    return <li>{reference}</li>
+                  })}
+                </ul>
+              </div>
             </div>
-            <div className="col-lg-8">
-              <div className="big-letter text">{projectData?.theResult}</div>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 

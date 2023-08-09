@@ -44,21 +44,20 @@
   },
   {
     "appType": "Web",
-    "backendStack": ["php"],
-    "clientName": "Results at Hand",
-    "description": "A drop and drop navigation page builder",
+    "clientName": "Nicolas Chiong",
+    "backendStack": ["firebase", "next"],
+    "description": "This is my personal portfolio where I share my latest projects and ideas",
     "frontendStack": ["react", "typescript", "javascript", "storybook", "html", "css", "emotion"],
-    "industry": "Marketing",
-    "infrastructureStack": ["trello", "gitlab"],
-    "location": "USA",
-    "name": "Results at Hand - Navigation Builder",
-    "projectLogo": "labsavvy",
-    "projectStart": "May 2023",
-    "projectType": "Client Project",
-    "slug": "results-at-hand-navigation-builder",
-    "theChallenges": "This client was challenging but finished the application",
-    "theResult": "Finished "
+    "industry": "Personal",
+    "infrastructureStack": ["firebase", "github", "git"],
+    "name": "Nicolas Chiong Portfolio and Project Showcase",
+    "projectLogo": "nicolaschiong",
+    "projectType": "Personal Project",
+    "slug": "nicolas-chiong-portfolio",
+    "theChallenges": "",
+    "theResult": ""
   },
+
   {
     "appType": "Web",
     "backendStack": ["node-js", "graphql", "mongodb"],
@@ -74,7 +73,7 @@
     "projectType": "Client Project",
     "slug": "accenture-com",
     "theChallenges": "",
-    "theResult": ","
+    "theResult": ""
   },
   {
     "appType": "Web",
@@ -91,7 +90,7 @@
     "projectType": "Client Project",
     "slug": "accenture-myscheduling",
     "theChallenges": "",
-    "theResult": ","
+    "theResult": ""
   },
   {
     "appType": "Web & Mobile",
@@ -106,7 +105,7 @@
     "projectType": "Client Project",
     "slug": "veggie-go",
     "theChallenges": "",
-    "theResult": ","
+    "theResult": ""
   },
   {
     "appType": "Mobile",
@@ -121,7 +120,7 @@
     "projectType": "Client Project",
     "slug": "fishingbuddy",
     "theChallenges": "",
-    "theResult": ","
+    "theResult": ""
   },
   {
     "appType": "Web",
@@ -140,17 +139,19 @@
   },
   {
     "appType": "Web",
-    "clientName": "Nicolas Chiong",
-    "backendStack": ["firebase", "next"],
-    "description": "This is my personal portfolio where I share my latest projects and ideas",
+    "backendStack": ["php"],
+    "clientName": "Results at Hand",
+    "description": "A drop and drop navigation page builder",
     "frontendStack": ["react", "typescript", "javascript", "storybook", "html", "css", "emotion"],
-    "industry": "Personal",
-    "infrastructureStack": ["firebase", "github", "git"],
-    "name": "Nicolas Chiong Portfolio and Project Showcase",
-    "projectLogo": "nicolaschiong",
-    "projectType": "Personal Project",
-    "slug": "nicolas-chiong-portfolio",
+    "industry": "Marketing",
+    "infrastructureStack": ["trello", "gitlab"],
+    "location": "USA",
+    "name": "Results at Hand - Navigation Builder",
+    "projectLogo": "results-at-hand",
+    "projectStart": "May 2023",
+    "projectType": "Client Project",
+    "slug": "results-at-hand-navigation-builder",
     "theChallenges": "",
-    "theResult": ","
+    "theResult": " "
   }
 ]

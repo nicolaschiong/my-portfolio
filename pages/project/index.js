@@ -33,7 +33,10 @@ const BlogPage = () => {
               <div className="col-lg-6">
                 <div className="project-item">
                   <div className="image wow fadeInUp delay-0-2s">
-                    <img src="assets/images/projects/project-list2.jpg" alt="Project List" />
+                    <img
+                      src={`assets/images/projects/${project?.slug}-thumbnail.png`}
+                      alt={project?.name}
+                    />{" "}
                     <Link legacyBehavior href={`/project/${project?.slug}`}>
                       <a className="project-btn">
                         <i className="far fa-arrow-right" />
